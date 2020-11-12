@@ -10,11 +10,11 @@ const LoginVisitante = () => {
                 <form>
                     <div className="login__formulario">
                         <label htmlFor="nome">Nome</label>
-                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome" />
+                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required/>
                     </div>
                     <div className="login__formulario">
                         <label htmlFor="token">Token</label>
-                        <input id="token" type="text" name="token" placeholder="Digite o token recebido" />
+                        <input id="token" type="text" name="token" placeholder="Digite o token recebido" required/>
                     </div>
 
                     <Button type="submit" variant="contained" className="botao-login">Entrar</Button>
