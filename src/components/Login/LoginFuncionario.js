@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import { Button, Grid, Link } from '@material-ui/core'
 
 const LoginFuncionario = () => {
+
+    const [values, setValues] = useState(initialState);
+
+    function initialState() {
+        return {
+            email: '',
+            password: ''
+        }
+    }
+
+    function onChange(event) {
+        const { value, name } = event.target;
+        setValues({
+            ...values,
+            [name]: value,
+        })
+    }
+
     return (
         <div className="container">
             <div className="login">
@@ -10,11 +28,11 @@ const LoginFuncionario = () => {
                 <form>
                     <div className="login__formulario">
                         <label htmlFor="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required/>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" onChange={onChange} value={values.email} required/>
                     </div>
                     <div className="login__formulario">
                         <label htmlFor="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required/>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" onChange={onChange} value={values.password} required/>
                     </div>
 
                     <Button type="submit" variant="contained" className="botao-login">Entrar</Button>
