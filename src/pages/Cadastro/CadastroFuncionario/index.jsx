@@ -6,6 +6,14 @@ import './styles.css';
 const CadastroFuncionario = () => {
   const [values, setValues] = useState({ name: '', email: '', password: '', confirmPassword: '' });
 
+  const handleRegistration = event => {
+    event.preventDefault();
+
+    if(values.password !== values.confirmPassword){
+      alert('As senhas digitadas não correspondem!');
+    }
+  }
+
   const onChange = event => {
     const { value, name } = event.target;
     setValues({
@@ -18,10 +26,10 @@ const CadastroFuncionario = () => {
       <h1 className="title">
         CADASTRO (FUNCIONÁRIO)
       </h1>
-      <form>
+      <form onSubmit={handleRegistration}>
         <div className="input__cadastro">
           <label htmlFor="name">Nome</label>
-          <input type="email" name="name" placeholder="Digite seu nome*" value={values.name} onChange={onChange} required/>
+          <input type="text" name="name" placeholder="Digite seu nome*" value={values.name} onChange={onChange} required/>
         </div>
         <div className="input__cadastro">
           <label htmlFor="email">E-mail</label>
