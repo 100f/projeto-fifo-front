@@ -1,0 +1,42 @@
+#page-not-found {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-not-found h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12rem;
+
+  color: #4285f4;
+  margin-bottom: 3rem;
+}
+
+#page-not-found p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: #424242;
+  margin-bottom: 1.8rem;
+}
+
+#page-not-found p span {
+  text-decoration: underline;
+}
+
+#page-not-found .link-home {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+
+  text-decoration: none;
+
+  color: #424242;
+}
+
+#page-not-found .link-home:hover {
+  color: #4285f4;
+}

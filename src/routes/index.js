@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import AuthProvider from '../contexts/auth/Provider';
 
@@ -10,6 +10,7 @@ import LoginFuncionario from '../pages/Login/LoginFuncionario';
 import LoginVisitante from '../pages/Login/LoginVisitante';
 import CadastroFuncionario from '../pages/Cadastro/CadastroFuncionario';
 import CadastroVisitante from '../pages/Cadastro/CadastroVisitante';
+import NotFound from '../pages/NotFound';
 
 const Routes = () => (
   <Router>
@@ -19,6 +20,7 @@ const Routes = () => (
         <PublicRoute path="/visitante" component={LoginVisitante}/>
         <PublicRoute path="/cadastro/funcionario" component={CadastroFuncionario}/>
         <PublicRoute path="/cadastro/visitante" component={CadastroVisitante}/>
+        <Route component={NotFound}/>
       </Switch>
     </AuthProvider>
   </Router>
