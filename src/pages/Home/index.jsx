@@ -1,14 +1,18 @@
 import React from 'react';
+
 import AvailableMatchesList from '../../components/AvailableMatchesList';
+
 import './styles.css';
+
 const staticData = {"partidas": [
   { "id_partida": 35, "id_jogo": 1, "nome_jogo": "FIFA", "local": "Hall de Entrada" },
   { "id_partida": 36, "id_jogo": 2, "nome_jogo": "Tênis de Mesa", "local": "Hall de Entrada" },
   { "id_partida": 37, "id_jogo": 3, "nome_jogo": "Mortal Kombat X", "local": "Sala Zelda" },
   { "id_partida": 38, "id_jogo": 4, "nome_jogo": "Beat Saber", "local": "Teste" },
-  { "id_partida": 39, "id_jogo": 3, "nome_jogo": "Mortal Kombat X", "local": "Sala Zelda" },
-  { "id_partida": 42, "id_jogo": 3, "nome_jogo": "Mortal Kombat X", "local": "Sala Zelda" },
-  { "id_partida": 48, "id_jogo": 3, "nome_jogo": "Mortal Kombat X", "local": "Sala Zelda" }
+  { "id_partida": 39, "id_jogo": 2, "nome_jogo": "Tênis de Mesa", "local": "Sala Zelda" },
+  { "id_partida": 22, "id_jogo": 2, "nome_jogo": "Tênis de Mesa", "local": "Hall de Entrada" },
+  { "id_partida": 55, "id_jogo": 4, "nome_jogo": "Beat Saber", "local": "Teste" },
+  { "id_partida": 18, "id_jogo": 1, "nome_jogo": "FIFA", "local": "Hall de Entrada" },
 ]};
 
 const Home = () => {
