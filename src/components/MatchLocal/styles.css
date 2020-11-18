@@ -1,0 +1,22 @@
+#match-local-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#match-local-container .circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+
+  background-color: #6fff98;
+  margin-right: 1.5rem;
+}
+
+#match-local-container span {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+
+  color: var(--azul-escuro);
+}

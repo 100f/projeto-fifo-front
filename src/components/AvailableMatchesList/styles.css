@@ -1,0 +1,29 @@
+#available-matches-list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+
+  list-style-type: none;
+  overflow-x: auto;
+}
+#available-matches-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-right: 4rem;
+}
+#available-matches-list li .match-image {
+  align-self: center;
+  width: 26.3rem;
+  height: 33.9rem;
+
+  border-radius: 1rem;
+  margin-bottom: 2.7rem;
+}
+
+#available-matches-list li .match-local {
+  margin-left: 2.2rem;
+}
