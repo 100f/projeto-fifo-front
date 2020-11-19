@@ -1,0 +1,20 @@
+#next-step-button-container {
+  width: 19rem;
+  height: 2.8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ff8a61;
+  border-radius: 1rem;
+
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: center;
+  color: white;
+
+  overflow: wrap;
+}
