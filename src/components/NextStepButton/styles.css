@@ -1,4 +1,5 @@
-#next-step-button-container {
+#next-step-button-container,
+#next-step-button-container-inactive {
   width: 19rem;
   height: 2.8rem;
 
@@ -7,7 +8,6 @@
   justify-content: center;
   align-items: center;
 
-  background-color: #ff8a61;
   border-radius: 1rem;
 
   font-family: "Roboto Mono", sans-serif;
@@ -17,4 +17,23 @@
   color: white;
 
   overflow: wrap;
+}
+
+#next-step-button-container {
+  background-color: var(--laranja-escuro);
+}
+
+#next-step-button-container-inactive {
+  background-color: #ff8a61;
+}
+
+#next-step-button-container:hover {
+  cursor: pointer;
+  box-shadow: 0px 3px 20px rgba(254, 85, 26, 0.5);
+}
+
+#next-step-button-container-inactive:hover {
+  cursor: default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }

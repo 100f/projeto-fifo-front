@@ -1,0 +1,25 @@
+.games-select-container {
+  width: 18.9rem;
+  height: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+
+  margin-bottom: 3rem;
+}
+
+.games-select-container select {
+  width: 100%;
+  height: 100%;
+
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  color: var(--cinza-medio);
+  background-color: transparent;
+  outline: 0;
+}
