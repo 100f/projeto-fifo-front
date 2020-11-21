@@ -1,0 +1,14 @@
+.select-container {
+  width: 19rem;
+  height: 3rem;
+
+  margin-bottom: 3rem;
+}
+
+.react-wrapped-select {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  color: var(--cinza-medio);
+}
