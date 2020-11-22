@@ -58,7 +58,7 @@
   border-color: #757474;
 }
 
-button {
+#page-cadastro-funcionario form .botao-cadastro {
   padding: 9px 10px;
   text-transform: uppercase;
   border-radius: 4px;
