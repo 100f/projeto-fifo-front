@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 import { MdKeyboardArrowDown as ArrowDownIcon, MdSearch as SearchIcon } from 'react-icons/md';
 
-import mockPlayers from '../../assets/temp/availablePlayers.json';
-
 import PlayButton from '../PlayButton';
 import NextStepButton from '../NextStepButton';
 import StageTitle from '../StageTitle';
@@ -39,19 +37,28 @@ const MatchCreationCard = () => {
   }, [stage]);
 
   const fetchGames = async () => {
-    const response = await api.get('jogos');
-    const data = await response.data;
-    const convertedGames = convertDatasetForSelect(data, 'nome', 'id');
-
-    setGames(convertedGames);
-    console.log(games);
+    try {
+      const response = await api.get('jogos');
+      const data = await response.data;
+      const convertedGames = convertDatasetForSelect(data, 'nome', 'id');
+  
+      setGames(convertedGames);
+    }
+    catch(err) {
+      throw err;
+    }
   };
 
   const fetchAvailablePlayers = async () => {
-    const data = mockPlayers;
-    const convertedPlayers = convertDatasetForSelect(data.jogadores, 'nome', 'id');
-
-    setAvailablePlayers(convertedPlayers);
+    try {
+      const response = await api.get('usuarios/disponiveis');
+      const data = await response.data;
+      const convertedPlayers = convertDatasetForSelect(data, 'nome', 'id');
+      setAvailablePlayers(convertedPlayers);
+    }
+    catch(err) {
+      throw err;
+    }   
   };
 
   const handleStageSkipping = e => {

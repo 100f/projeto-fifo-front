@@ -8,30 +8,3 @@
 #available-matches-list-container::-webkit-scrollbar {
   width: 0;
 }
-
-.available-match {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  margin-right: 4rem;
-}
-
-.available-match .match-image {
-  width: 26.3rem;
-  height: 33.9rem;
-
-  border-radius: 1rem;
-  margin-bottom: 2.7rem;
-
-  transition: opacity, 0.4s;
-}
-
-.available-match .match-image:hover {
-  opacity: 0.8;
-}
-
-.available-match .match-local {
-  margin-left: 2.2rem;
-}

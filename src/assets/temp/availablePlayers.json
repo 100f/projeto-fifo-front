@@ -1,9 +1,0 @@
-{
-  "jogadores": [
-    {"nome": "Robson Gonçalves", "id": 4},
-    {"nome": "Leila Schulz", "id": 10},
-    {"nome": "Kleber Santos", "id": 17},
-    {"nome": "Victor Oliveira", "id": 6},
-    {"nome": "Matheus Coimbra", "id": 15}
-  ]
-}
