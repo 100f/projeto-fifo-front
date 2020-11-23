@@ -1,12 +1,13 @@
 #stage-title-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 
-  width: 21.7rem;
+  width: 100%;
   height: auto;
 
   margin: 7rem 0 2.4rem 0;
+  padding-left: 2.2rem;
 }
 
 #stage-title-container .stage-title-circle {
@@ -20,6 +21,8 @@
   align-items: center;
 
   background-color: white;
+
+  margin-right: 1.1rem;
 }
 
 #stage-title-container .stage-title-circle .stage-title-number {

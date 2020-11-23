@@ -8,6 +8,8 @@
 
   border-radius: 3rem;
   background-color: white;
+
+  transition: box-shadow 0.4s;
 }
 
 #play-button-container .play-button-icon {
