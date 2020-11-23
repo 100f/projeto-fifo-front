@@ -8,7 +8,7 @@ const AuthProvider = ({ children }) => {
   const [loggedUser, setLoggedUser] = useStorage('loggedUser');
 
   return (
-    <AuthContext.Provider value={{token, setToken, loggedUser, setLoggedUser}}>
+    <AuthContext.Provider value={{ token, setToken, loggedUser, setLoggedUser }}>
       { children }
     </AuthContext.Provider>
   );
