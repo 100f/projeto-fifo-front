@@ -45,10 +45,9 @@ const Home = () => {
 
   return (
     <div id='page-home'>
-      <RankingRight />
-      <Menu/>
+      
       <div className="page-home-content">
-        <h2>O que estão jogando agora</h2>
+        <h2 className="page-home-content-title">O que estão jogando agora</h2>
         {
           availableMatches.length > 0
           ? <AvailableMatchesList list={availableMatches}/>
@@ -57,6 +56,8 @@ const Home = () => {
 
         <h2 className="page-home-content-favs">Seus Favoritos</h2>
         <FavouriteGamesList list={favouriteGames}/>
+        <RankingRight />
+        <Menu/>
       </div>
     </div> 
   )

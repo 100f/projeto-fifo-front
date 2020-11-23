@@ -12,16 +12,17 @@
   margin-left: 16.4rem;
 }
 
-#page-home .page-home-content h2 {
+#page-home .page-home-content .page-home-content-title,
+#page-home .page-home-content h2.page-home-content-favs {
   font-family: "Montserrat", sans-serif;
   font-size: 4rem;
   font-weight: bold;
 
   color: var(--azul-escuro);
 
-  margin-bottom: 8rem;
+  margin-bottom: 7rem;
 }
 
-#page-home .page-home-content .page-home-content-favs {
+#page-home .page-home-content h2.page-home-content-favs {
   margin-top: 6rem;
 }
