@@ -1,0 +1,12 @@
+#available-matches-list-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  list-style-type: none;
+
+  overflow-x: auto;
+}
+#available-matches-list-container::-webkit-scrollbar {
+  width: 0;
+}

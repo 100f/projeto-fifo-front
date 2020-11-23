@@ -1,0 +1,28 @@
+#page-home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#page-home .page-home-content {
+  width: 100%;
+  height: 100%;
+
+  margin-top: 8.5rem;
+  margin-left: 16.4rem;
+}
+
+#page-home .page-home-content .page-home-content-title,
+#page-home .page-home-content h2.page-home-content-favs {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+
+  color: var(--azul-escuro);
+
+  margin-bottom: 7rem;
+}
+
+#page-home .page-home-content h2.page-home-content-favs {
+  margin-top: 6rem;
+}

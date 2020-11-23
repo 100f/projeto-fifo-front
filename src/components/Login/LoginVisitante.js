@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import './style.css';
+import { useHistory } from 'react-router-dom';
+
 import { Button } from '@material-ui/core'
 
+import './style.css';
+
 const LoginVisitante = () => {
-
     const [values, setValues] = useState(initialState);
-
+    const history = useHistory();
+    
     function initialState() {
         return {
             nome: '',
@@ -21,11 +24,21 @@ const LoginVisitante = () => {
         })
     }
 
+    const handleLogin = e => {
+        e.preventDefault();
+
+        if(values.name === 'Visitante' && values.token === '123'){
+            history.push('/home');
+        }
+        else {
+            alert('Login/Token inválido(s)!');
+        }
+    }
     return (
         <div className="container">
             <div className="login">
                 <h1 className="login__titulo">ÁREA DE LOGIN</h1>
-                <form>
+                <form onSubmit={handleLogin}>
                     <div className="login__formulario">
                         <label htmlFor="nome">Nome</label>
                         <input id="nome" type="text" name="nome" placeholder="Digite seu nome" onChange={onChange} value={values.nome} required/>

@@ -1,0 +1,11 @@
+.stage-back-button {
+  position: absolute;
+  left: 2.5rem;
+  bottom: 3rem;
+  transition: opacity 0.7s;
+}
+
+.stage-back-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

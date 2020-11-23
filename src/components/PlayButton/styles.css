@@ -1,0 +1,26 @@
+#play-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 6rem;
+  height: 6rem;
+
+  border-radius: 3rem;
+  background-color: white;
+
+  transition: box-shadow 0.4s;
+}
+
+#play-button-container .play-button-icon {
+  margin-left: 0.6rem;
+}
+
+#play-button-container:hover,
+#play-button-container .play-button-icon:hover {
+  cursor: pointer;
+}
+
+#play-button-container:hover {
+  box-shadow: 0px 3px 30px rgba(255, 255, 255, 0.5);
+}

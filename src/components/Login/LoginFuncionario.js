@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import './style.css';
 import { Button, Grid, Link } from '@material-ui/core'
 
-const LoginFuncionario = () => {
+import { useHistory } from 'react-router-dom';
 
+import useAuth from '../../hooks/useAuth';
+
+import './style.css';
+
+const LoginFuncionario = () => {
     const [values, setValues] = useState(initialState);
+    const { setLoggedUser, setToken } = useAuth();
+    const history = useHistory();
 
     function initialState() {
         return {
@@ -21,11 +27,24 @@ const LoginFuncionario = () => {
         })
     }
 
+    const handleLogin = e => {
+        e.preventDefault();
+
+        if(values.email === 'funcionario@fcamara.com.br' && values.password === '123'){
+            setToken('CgP1O988xZ2E2cBab30RMHrHDcEfxjBYZgeFONTm4lVK0');
+            setLoggedUser({ name: 'Funcionário', password: values.password });
+            history.push('/home');
+        }
+        else {
+            alert('Login/Senha inválido(s)!');
+        }
+    }
+
     return (
         <div className="container">
             <div className="login">
                 <h1 className="login__titulo">ÁREA DE LOGIN</h1>
-                <form>
+                <form onSubmit={handleLogin}>
                     <div className="login__formulario">
                         <label htmlFor="email">E-mail</label>
                         <input id="email" type="email" name="email" placeholder="Digite seu e-mail" onChange={onChange} value={values.email} required/>
