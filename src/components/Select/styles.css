@@ -3,12 +3,20 @@
   height: 3rem;
 
   margin-bottom: 3rem;
+
+  background-color: white;
 }
 
 .react-wrapped-select {
+  width: 100%;
+
   font-family: "Roboto Mono", sans-serif;
   font-weight: bold;
   font-size: 1.4rem;
 
   color: var(--cinza-medio);
+}
+
+.select-custom-left-icon {
+  margin-left: 0.8rem;
 }

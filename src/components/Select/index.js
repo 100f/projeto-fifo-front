@@ -7,11 +7,13 @@ import './styles.css';
 const Select = ({ 
     backgroundColor = 'white', 
     color = '#677885', 
-    dropdownIcon, 
+    dropdownIcon = null, 
+    leftIcon = null,
     searchable = false,
     ...rest 
 }) => {
-  const Icon = dropdownIcon;
+  const DropdownIcon = dropdownIcon;
+  const LeftIcon = leftIcon;
 
   const overridedStyles = {
     control: defaultStyles => ({
@@ -20,10 +22,12 @@ const Select = ({
       boxShadow: "none",
       backgroundColor,
       borderRadius: 0,
+      minHeight: 30,
+      height: 30
     }),
     indicatorSeparator: () => {},
     option: defaultStyles => ({ ...defaultStyles, color }),
-    input: defaultStyles => ({ ...defaultStyles, color, font: 'Roboto Mono' }),
+    input: defaultStyles => ({ ...defaultStyles, color }),
     dropdownIndicator: defaultStyles => ({
       ...defaultStyles,
       color,
@@ -34,8 +38,15 @@ const Select = ({
 
   const DropdownIndicator = props => (
     <components.DropdownIndicator {...props}>
-      <Icon />
+      { dropdownIcon && <DropdownIcon size={20}/> }
     </components.DropdownIndicator>
+  );
+  
+  const Control = props => (
+    <components.Control {...props}>
+      { leftIcon && <LeftIcon size={20} className="select-custom-left-icon" color="#0A263A"/> }
+      {props.children}
+    </components.Control>
   );
 
   return (
@@ -43,7 +54,7 @@ const Select = ({
       <ReactSelect
         className="react-wrapped-select"
         styles={overridedStyles}
-        components={DropdownIndicator}
+        components={{ Control, DropdownIndicator }}
         noOptionsMessage={() => 'sem opções'}
         isSearchable={searchable}
         {...rest}
