@@ -1,9 +1,9 @@
 {
   "jogadores": [
-    {"nome": "Jogador Disponível 1", "id": 4},
-    {"nome": "Jogador Disponível 2", "id": 10},
-    {"nome": "Jogador Disponível 3", "id": 17},
-    {"nome": "Jogador Disponível 4", "id": 6},
-    {"nome": "Jogador Disponível 5", "id": 15}
+    {"nome": "Robson Gonçalves", "id": 4},
+    {"nome": "Leila Schulz", "id": 10},
+    {"nome": "Kleber Santos", "id": 17},
+    {"nome": "Victor Oliveira", "id": 6},
+    {"nome": "Matheus Coimbra", "id": 15}
   ]
 }
