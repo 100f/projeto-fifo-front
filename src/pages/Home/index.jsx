@@ -3,6 +3,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import AvailableMatchesList from '../../components/AvailableMatchesList';
 import MatchCreationCard from '../../components/MatchCreationCard';
 import FavouriteGamesList from '../../components/FavouriteGamesList';
+import RankingRight from '../../components/Ranking/RankingRight';
+import Menu from '../../components/Menu/Menu';
 
 import mockGames from '../../assets/temp/favouriteGames.json';
 
@@ -43,16 +45,20 @@ const Home = () => {
 
   return (
     <div id='page-home'>
-      <h2>O que estão jogando agora</h2>
-      {
-        availableMatches.length > 0
-        ? <AvailableMatchesList list={availableMatches}/>
-        : <MatchCreationCard />
-      }    
+      <RankingRight />
+      <Menu/>
+      <div className="page-home-content">
+        <h2>O que estão jogando agora</h2>
+        {
+          availableMatches.length > 0
+          ? <AvailableMatchesList list={availableMatches}/>
+          : <MatchCreationCard />
+        }    
 
-      <h2>Seus Favoritos</h2>
-      <FavouriteGamesList list={favouriteGames}/>
-    </div>
+        <h2 className="page-home-content-favs">Seus Favoritos</h2>
+        <FavouriteGamesList list={favouriteGames}/>
+      </div>
+    </div> 
   )
 };
 

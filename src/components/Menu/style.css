@@ -3,41 +3,42 @@
 \*-----------*/
 
 .menu {
-    position: absolute;
-    width: 40px;
-    height: 100vh;
-    left: 0px;
-    top: 0px;
+  position: fixed;
+  width: 40px;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
 
-    background-color: var(--azul-escuro);
-    border-radius: 0 8px 8px 0;
+  background-color: var(--azul-escuro);
+  border-radius: 0 8px 8px 0;
+
+  z-index: 10;
 }
 
 .menu .items-menu {
-    position: relative;
-    align-items: initial;
-    top: 20%;
+  position: relative;
+  align-items: initial;
+  top: 20%;
 }
 
 /*-----------*\
 	ICONS
 \*-----------*/
 
-
 .icon {
-    color: white;
-    margin-bottom: 10px;
-    cursor: pointer;
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .icon:hover {
-    color: var(--laranja-escuro);
-    background-color: white;
-    border-radius: 0 5px 5px 0;
+  color: var(--laranja-escuro);
+  background-color: white;
+  border-radius: 0 5px 5px 0;
 }
 
 .icon:focus {
-    color: var(--laranja-escuro);
-    background-color: white;
-    border-radius: 0 5px 5px 0;
+  color: var(--laranja-escuro);
+  background-color: white;
+  border-radius: 0 5px 5px 0;
 }
