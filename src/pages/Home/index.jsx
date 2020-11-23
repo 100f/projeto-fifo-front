@@ -5,9 +5,7 @@ import MatchCreationCard from '../../components/MatchCreationCard';
 
 import './styles.css';
 
-const availableMatches = {"partidas": [
-  
-]};
+const availableMatches = {"partidas": []};
 
 const Home = () => {
   return (
