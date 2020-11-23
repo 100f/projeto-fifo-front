@@ -143,8 +143,8 @@ const MatchCreationCard = () => {
           <p className="third-stage-message">
             {
               invitedPlayer 
-              ? <span>Você vai jogar Fifa no(a) <strong className="third-stage-emphasis">{local}</strong> com <strong className="third-stage-emphasis">{invitedPlayer.name}</strong>, <strong className="third-stage-emphasis">{opponents[0].name}</strong> e <strong>{opponents[1].name}</strong></span>
-              : <span>Você vai jogar Fifa no(a) <strong className="third-stage-emphasis">{local}</strong>, sozinho(a)</span>
+              ? <span>Você vai jogar <strong className="third-stage-emphasis">{selectedGame.name}</strong> no(a) <strong className="third-stage-emphasis">{local}</strong> com <strong className="third-stage-emphasis">{invitedPlayer.name}</strong>, <strong className="third-stage-emphasis">{opponents[0].name}</strong> e <strong>{opponents[1].name}</strong></span>
+              : <span>Você vai jogar <strong className="third-stage-emphasis">{selectedGame.name}</strong> no(a) <strong className="third-stage-emphasis">{local}</strong>, sozinho(a)</span>
             }
           </p>
           <NextStepButton text="partiu jogar" onClick={() => {}} />

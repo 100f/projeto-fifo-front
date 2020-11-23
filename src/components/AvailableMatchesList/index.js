@@ -4,9 +4,7 @@ import MatchCard from '../MatchCard';
 
 import './styles.css';
 
-const AvailableMatchesList = ({ list }) => {
-  const { partidas: matches } = list;
-
+const AvailableMatchesList = ({ list: matches }) => {
   return (
     <ul id="available-matches-list-container">
       {
