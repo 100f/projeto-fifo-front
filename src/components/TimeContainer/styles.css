@@ -1,0 +1,21 @@
+.time-container {
+  width: 14.3rem;
+  height: 4.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  color: var(--azul-escuro);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  border-radius: 1rem;
+}

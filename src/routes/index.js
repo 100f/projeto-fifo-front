@@ -11,6 +11,7 @@ import LoginVisitante from '../pages/Login/LoginVisitante';
 import CadastroFuncionario from '../pages/Cadastro/CadastroFuncionario';
 import CadastroVisitante from '../pages/Cadastro/CadastroVisitante';
 import Home from '../pages/Home';
+import Queue from '../pages/Queue';
 import NotFound from '../pages/NotFound';
 
 const Routes = () => (
@@ -22,6 +23,7 @@ const Routes = () => (
         <PublicRoute path="/cadastro/funcionario" component={CadastroFuncionario}/>
         <PublicRoute path="/cadastro/visitante" component={CadastroVisitante}/>
         <PublicRoute path="/home" component={Home}/>
+        <PublicRoute path="/queue/:id" component={Queue}/>
         <Route component={NotFound}/>
       </Switch>
     </AuthProvider>
