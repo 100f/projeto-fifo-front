@@ -1,0 +1,34 @@
+#game-queue-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: auto;
+  height: 30rem;
+
+  margin-right: 8.5rem;
+  padding-right: 0.3rem;
+
+  overflow-y: auto;
+}
+
+#game-queue-list-container > li {
+  margin-bottom: 0.6rem;
+}
+
+#game-queue-list-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+#game-queue-list-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+
+  border-radius: 10px;
+}
+
+#game-queue-list-container::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: var(--cinza-claro);
+}
