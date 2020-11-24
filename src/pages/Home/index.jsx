@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
+import { MdNotifications as NotificationsIcon } from 'react-icons/md';
+import { VscTriangleDown as DownArrowIcon } from 'react-icons/vsc';
+
 import AvailableMatchesList from '../../components/AvailableMatchesList';
 import MatchCreationCard from '../../components/MatchCreationCard';
 import FavouriteGamesList from '../../components/FavouriteGamesList';
 import RankingRight from '../../components/Ranking/RankingRight';
 import Menu from '../../components/Menu/Menu';
+import SearchBar from '../../components/SearchBar';
 
 import mockGames from '../../assets/temp/favouriteGames.json';
 
@@ -44,10 +48,18 @@ const Home = () => {
   }, [setFavouriteGames])
 
   return (
-    <div id='page-home'>
-      
+    <div id="page-home">
       <div className="page-home-content">
-        <h2 className="page-home-content-title">O que estão jogando agora</h2>
+        <header>
+          <h2 className="page-home-content-title">O que estão jogando agora</h2>
+          <SearchBar />
+          <div className="round-button-wrapper">
+            <NotificationsIcon size={24} className="round-button-icon"/>
+          </div>
+          <div className="round-button-wrapper">
+            <DownArrowIcon size={32} className="round-button-icon"/>
+          </div>
+        </header>
         {
           availableMatches.length > 0
           ? <AvailableMatchesList list={availableMatches}/>
