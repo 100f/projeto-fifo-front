@@ -5,9 +5,10 @@ import TimeContainer from '../../components/TimeContainer';
 
 import './styles.css';
 
-const OngoingMatchCard = ({ teams = null }) => {
+const OngoingMatchCard = ({ teams = null, game = '' }) => {
   return (
     <div id="ongoing-match-card-container">
+      <h3>{game}</h3>
       <div className="ongoing-match-card-participants-container">
         <QueueItem 
           name="Outra Pessoa 1" 

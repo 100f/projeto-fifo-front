@@ -12,6 +12,17 @@
   border-radius: 1rem;
 }
 
+#ongoing-match-card-container > h3 {
+  position: absolute;
+  top: 2.6rem;
+  left: 5.1rem;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: var(--verde-limao);
+}
+
 #ongoing-match-card-container > .ongoing-match-card-participants-container {
   width: auto;
   height: 8.2rem;
