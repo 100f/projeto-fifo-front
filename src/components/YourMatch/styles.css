@@ -1,0 +1,93 @@
+.options-right {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+
+}
+
+.options-right .options-right-option {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--azul-escuro);
+
+  padding: 5px;
+
+  display: block;
+}
+
+.options-right .options-right-option:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#actual-match-card-container h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  color: var(--azul-escuro);
+
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+
+#actual-match-card-container {
+  width: 101rem;
+  height: 40rem;
+
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: white;
+  border-radius: 1rem;
+
+  box-shadow: 0px 1px 10px 1px var(--azul-escuro);
+}
+
+#actual-match-card-container > .actual-match-card-participants-container {
+  width: auto;
+  height: 8.2rem;
+  max-height: 8.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 5.4rem;
+}
+
+#actual-match-card-container > span {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 7.2rem;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  color: var(--azul-escuro);
+}
+
+#actual-match-card-container .actual-match-card-time-section {
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: absolute;
+  right: 5.4rem;
+}
+
+
+.declare-buttons{
+  display: inline;
+  position: absolute;
+  bottom: 10px;
+  left: 160px;
+}
