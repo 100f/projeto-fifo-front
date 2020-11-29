@@ -1,5 +1,5 @@
 #page-home {
-  width: 100vw;
+  width: auto;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,11 +9,10 @@
   height: 100%;
 
   margin-top: 8.5rem;
-  margin-left: 16.4rem;
 }
 
 #page-home .page-home-content > header {
-  width: 100%;
+  width: auto;
 
   display: flex;
   flex-direction: row;
@@ -21,6 +20,7 @@
   align-items: center;
 
   margin-bottom: 7rem;
+  margin-left: 9.31%;
 }
 
 #page-home .page-home-content header .round-button-wrapper {
@@ -54,6 +54,7 @@
   color: var(--azul-escuro);
 
   margin-bottom: 7rem;
+  margin-left: 9.31%;
 }
 
 #page-home .page-home-content h2.page-home-content-favs {

@@ -6,6 +6,8 @@
   list-style-type: none;
 
   overflow-x: auto;
+
+  margin-left: 9.31%;
 }
 #available-matches-list-container::-webkit-scrollbar {
   width: 0;

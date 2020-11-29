@@ -23,17 +23,31 @@ const Select = ({
       backgroundColor,
       borderRadius: 0,
       minHeight: 30,
-      height: 30
+      height: 30,
+      display: 'flex',
+      alignContent: 'center',
     }),
-    indicatorSeparator: () => {},
     option: defaultStyles => ({ ...defaultStyles, color }),
     input: defaultStyles => ({ ...defaultStyles, color }),
-    dropdownIndicator: defaultStyles => ({
-      ...defaultStyles,
-      color,
-    }),
+    dropdownIndicator: defaultStyles => ({ ...defaultStyles, color }),
     singleValue: defaultStyles => ({ ...defaultStyles, color }),
-    menu: defaultStyles => ({ ...defaultStyles, borderRadius: 0, marginTop: 0 })
+    menu: defaultStyles => ({ ...defaultStyles, borderRadius: 0, marginTop: 0 }),
+    multiValue: defaultStyles => ({ 
+      ...defaultStyles, 
+      borderRadius: 10,
+      backgroundColor: '#6FFF98',
+      display: 'flex',
+      flex: 1,
+      overflow: 'hidden'
+    }),
+    multiValueRemove: defaultStyles => ({ 
+      ...defaultStyles, 
+      backgroundColor: 'transparent',
+      ':hover': {
+        backgroundColor: 'transparent'
+      }
+    }),
+    
   };
 
   const DropdownIndicator = props => (
@@ -49,12 +63,29 @@ const Select = ({
     </components.Control>
   );
 
+  const MultiValueContainer = props => (
+    <components.MultiValueContainer {...props}>
+      {props.children}
+    </components.MultiValueContainer>
+  );
+
+  const MultiValue = props => (
+    <components.MultiValue {...props}>
+      {props.children}
+    </components.MultiValue>
+  );
+
   return (
     <div className="select-container">
       <ReactSelect
         className="react-wrapped-select"
         styles={overridedStyles}
-        components={{ Control, DropdownIndicator }}
+        components={{ 
+          Control, 
+          DropdownIndicator, 
+          IndicatorSeparator: null, 
+          MultiValue,
+        }}
         noOptionsMessage={() => 'sem opções'}
         isSearchable={searchable}
         {...rest}

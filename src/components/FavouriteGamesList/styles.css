@@ -6,7 +6,9 @@
   list-style-type: none;
 
   overflow-x: auto;
+
   margin-bottom: 4rem;
+  margin-left: 9.31%;
 }
 
 #favourite-games-list-container::-webkit-scrollbar {

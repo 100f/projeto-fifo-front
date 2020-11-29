@@ -12,6 +12,8 @@
   border-radius: 1rem;
   box-shadow: 0px 5px 15px 3px var(--azul-escuro);
   position: relative;
+
+  margin-left: 9.31%;
 }
 
 .match-creation-card-container .default-stage-title,

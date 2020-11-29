@@ -9,6 +9,8 @@
 
   background-color: var(--azul-escuro);
   border-radius: 1rem;
+
+  margin-left: 8.47%;
 }
 
 #ongoing-match-card-container .ongoing-match-card-first-row {
