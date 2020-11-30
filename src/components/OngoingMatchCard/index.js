@@ -5,7 +5,7 @@ import TimeContainer from '../../components/TimeContainer';
 
 import './styles.css';
 
-const OngoingMatchCard = ({ teams = null, game = 'Fifa' }) => {
+const OngoingMatchCard = ({ teams = null, game = '' }) => {
   return (
     <div id="ongoing-match-card-container">
       <div className="ongoing-match-card-first-row">

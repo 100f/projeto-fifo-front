@@ -32,6 +32,7 @@ const Select = ({
     dropdownIndicator: defaultStyles => ({ ...defaultStyles, color }),
     singleValue: defaultStyles => ({ ...defaultStyles, color }),
     menu: defaultStyles => ({ ...defaultStyles, borderRadius: 0, marginTop: 0 }),
+    valueContainer: defaultStyles => ({ ...defaultStyles, position: 'static'}),
     multiValue: defaultStyles => ({ 
       ...defaultStyles, 
       borderRadius: 10,
@@ -61,12 +62,6 @@ const Select = ({
       { leftIcon && <LeftIcon size={20} className="select-custom-left-icon" color="#0A263A"/> }
       {props.children}
     </components.Control>
-  );
-
-  const MultiValueContainer = props => (
-    <components.MultiValueContainer {...props}>
-      {props.children}
-    </components.MultiValueContainer>
   );
 
   const MultiValue = props => (
