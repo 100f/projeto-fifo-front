@@ -142,3 +142,74 @@
   justify-content: flex-start;
   align-items: flex-end;
 }
+
+#actual-match-card-container .actual-match-settled-illustration-container {
+  width: 23.4rem;
+  height: 23.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 11.7rem;
+
+  background-color: white;
+
+  margin-left: 11.4rem;
+  margin-right: 10rem;
+}
+
+#actual-match-card-container .actual-match-settled-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#actual-match-card-container .actual-match-settled-options > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+
+  color: white;
+
+  margin-bottom: 1.8rem;
+  margin-top: 7rem;
+}
+
+#actual-match-card-container .actual-match-settled-options p:first-of-type {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+
+  line-height: 2.4rem;
+
+  color: white;
+
+  margin-bottom: 3.4rem;
+}
+
+#actual-match-card-container .actual-match-settled-options span {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  color: white;
+
+  margin-top: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+#actual-match-card-container .actual-match-settled-options span + p {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  text-align: center;
+  color: var(--cinza-medio);
+}
+
+#actual-match-card-container .actual-match-settled-options span:hover {
+  color: var(--laranja-escuro);
+  cursor: pointer;
+}

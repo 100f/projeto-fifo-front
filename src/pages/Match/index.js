@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
+import useMatchState from '../../hooks/useMatchState';
+
 import Menu from '../../components/Menu/Menu';
 import RankingRight from '../../components/Ranking/RankingRight';
 import SmallQueueList from '../../components/SmallQueueList';
@@ -18,6 +20,8 @@ const Match = () => {
   const [gameName, setGameName] = useState('Fifa');
   const [queueMembers, setQueueMembers] = useState([]);
 
+  const { matchState } = useMatchState();
+
   useEffect(() => {
     fetchCurrentQueueMembers();
   }, []);
@@ -34,8 +38,6 @@ const Match = () => {
     const pageResponse = await api.get('');
   }, []);
 
-
-
   return (
     <div id="match-page-container">
       <Menu />
@@ -45,37 +47,83 @@ const Match = () => {
 
         <YourMatch />
 
-        <div className="next-queue-members-card">
-              <div>
-                <p className="next-queue-members-game-name">Próximos da Fila</p>
-                <SmallQueueList players={queueMembers}/>
-              </div>
-              <p className="match-achievements-label">Suas Conquistas no {gameName}</p>
-              <div className="game-achievements-container">
-                <div className="ach-a">
-                  <LockedAchievement />
-                </div>
-                <div className="ach-b">
-                  <LockedAchievement />
-                </div>
-                <div className="ach-c">
-                  <LockedAchievement />
-                </div>
-                <div className="ach-d">
-                  <LockedAchievement />
-                </div>
-                <div className="ach-e">
-                  <LockedAchievement />
-                </div>
-                <div className="ach-f">
-                  <LockedAchievement />
-                </div>
-                <div className="ach-g">
-                  <LockedAchievement />
-                </div>
-
-              </div>
+        <div 
+          className="next-queue-members-card" 
+          style={{ 
+            backgroundColor: matchState !== 0 
+            ? 'white'
+            : '#0A263A'
+          }}
+        >
+          <div>
+            <p 
+              className="next-queue-members-game-name"
+              style={{ 
+                color: matchState !== 0 
+                ? '#0A263A'
+                : 'white'
+              }}
+            >
+              Próximos da Fila
+            </p>
+            <SmallQueueList players={queueMembers}/>
+          </div>
+          <p 
+            className="match-achievements-label" 
+            style={{ 
+              color: matchState !== 0 
+              ? '#0A263A'
+              : 'white'
+            }}
+          >
+            Suas Conquistas no {gameName}
+          </p>
+          <div className="game-achievements-container">
+            <div className="ach-a">
+              <LockedAchievement 
+                backgroundColor={matchState !== 0 ? '#F5F7FB' : '#0A263A'} 
+                color={matchState !== 0 ? '#0A263A' : 'white'}
+              />
             </div>
+            <div className="ach-b">
+              <LockedAchievement 
+                backgroundColor={matchState !== 0 ? '#F5F7FB' : '#0A263A'} 
+                color={matchState !== 0 ? '#0A263A' : 'white'}
+              />
+            </div>
+            <div className="ach-c">
+              <LockedAchievement 
+                backgroundColor={matchState !== 0 ? '#F5F7FB' : '#0A263A'} 
+                color={matchState !== 0 ? '#0A263A' : 'white'}
+              />
+            </div>
+            <div className="ach-d">
+              <LockedAchievement 
+                backgroundColor={matchState !== 0 ? '#F5F7FB' : '#0A263A'} 
+                color={matchState !== 0 ? '#0A263A' : 'white'}
+              />
+            </div>
+            <div className="ach-e">
+              <LockedAchievement 
+                backgroundColor={matchState !== 0 ? '#F5F7FB' : '#0A263A'} 
+                color={matchState !== 0 ? '#0A263A' : 'white'}
+              />
+            </div>
+            <div className="ach-f">
+              <LockedAchievement 
+                backgroundColor={matchState !== 0 ? '#F5F7FB' : '#0A263A'} 
+                color={matchState !== 0 ? '#0A263A' : 'white'}
+              />
+            </div>
+            <div className="ach-g">
+              <LockedAchievement 
+                backgroundColor={matchState !== 0 ? '#F5F7FB' : '#0A263A'} 
+                color={matchState !== 0 ? '#0A263A' : 'white'}
+              />
+            </div>
+
+          </div>
+        </div>
         <Whitespace />
       </div>
     </div>
