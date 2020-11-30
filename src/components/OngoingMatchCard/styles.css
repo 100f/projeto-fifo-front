@@ -2,17 +2,73 @@
   width: 101rem;
   height: 20.4rem;
 
-  position: relative;
-
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
   background-color: var(--azul-escuro);
   border-radius: 1rem;
+
+  margin-left: 8.47%;
 }
 
-#ongoing-match-card-container > .ongoing-match-card-participants-container {
+#ongoing-match-card-container .ongoing-match-card-first-row {
+  width: 56.5rem;
+  height: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 2.2rem;
+  margin-bottom: 2.6rem;
+}
+
+#ongoing-match-card-container .ongoing-match-card-first-row > h3 {
+  top: 2.6rem;
+  left: 5.1rem;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: var(--verde-limao);
+}
+
+#ongoing-match-card-container
+  .ongoing-match-card-first-row
+  .ongoing-match-card-time-section {
+  height: auto;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#ongoing-match-card-container
+  .ongoing-match-card-first-row
+  .ongoing-match-card-time-section
+  > h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+
+  margin-right: 2.3rem;
+
+  color: white;
+}
+
+#ongoing-match-card-container .ongoing-match-card-second-row {
+  width: 56.5rem;
+  height: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#ongoing-match-card-container
+  .ongoing-match-card-second-row
+  > .ongoing-match-card-participants-container {
   width: auto;
   height: 8.2rem;
   max-height: 8.2rem;
@@ -21,11 +77,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
-  margin: 0 5.4rem;
 }
 
-#ongoing-match-card-container > span {
+#ongoing-match-card-container > .ongoing-match-card-second-row span {
   font-family: "Roboto Mono", sans-serif;
   font-weight: bold;
   font-size: 7.2rem;
@@ -34,26 +88,4 @@
   -moz-user-select: none;
 
   color: white;
-}
-
-#ongoing-match-card-container .ongoing-match-card-time-section {
-  height: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  position: absolute;
-  right: 5.4rem;
-}
-
-#ongoing-match-card-container .ongoing-match-card-time-section > h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 2.4rem;
-
-  color: white;
-
-  margin-bottom: 2.2rem;
 }

@@ -6,7 +6,13 @@
   list-style-type: none;
 
   overflow-x: auto;
+
+  margin-left: 9.31%;
 }
 #available-matches-list-container::-webkit-scrollbar {
   width: 0;
+}
+
+#available-matches-list-container .match-creation-card-list-item {
+  align-self: flex-start;
 }
