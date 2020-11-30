@@ -1,0 +1,16 @@
+.locked-achievement-container {
+  width: 7.6rem;
+  height: 7.6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  box-shadow: inset 0px 3px 50px rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.locked-achievement-container .locked-achievement-icon {
+  color: white;
+}
