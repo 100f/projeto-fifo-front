@@ -31,6 +31,7 @@ Feito isso, siga o passo-a-passo:
 - Pelo terminal, navegue até a pasta do Projeto;
 - Utilize o comando para instalar as dependências: `yarn install` 
 - Utilize o comando para rodar o projeto no navegador: `yarn start`
+- Para simular um login válido, utilize ```login: funcionario@fcamara.com.br``` e ```senha: 123```
 
 ### Back-End
 
