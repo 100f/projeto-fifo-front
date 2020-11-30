@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+  min-width: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.login {
+  width: 45.1rem;
+  height: 37.4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 0 8rem;
+
+  background-color: var(--azul-escuro);
+  box-shadow: 0px 7px 7px 4px rgba(0, 0, 0, 0.25);
+
+  border-radius: 1rem;
+
+  margin-top: 17.9rem;
+}
+
+.login__titulo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+
+  color: white;
+
+  margin-top: 4.1rem;
+  margin-bottom: 0.8rem;
+
+  text-align: center;
+}
+.login-register-link {
+  align-self: flex-start;
+  text-decoration: none;
+
+  text-emphasis: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  color: var(--cinza-medio);
+}
+
+.login-register-link > strong {
+  color: white;
+}
+
+.login__titulo + span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+
+  color: white;
+
+  margin-bottom: 2.6rem;
+}
+
+.login__formulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.login__formulario label {
+  width: 100%;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--cinza-medio);
+
+  margin-bottom: 0.3rem;
+}
+
+.login__formulario input {
+  height: 3rem;
+
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--cinza-medio);
+
+  padding: 0.5rem 1.7rem;
+}
+
+.login__formulario input:focus {
+  outline: 0;
+}
+
+.login__formulario + span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  color: white;
+
+  margin-bottom: 1.8rem;
+  margin-top: 8rem;
+}
+
+.login .botao-login {
+  width: 29.1rem;
+  height: 3rem;
+
+  border-radius: 1rem;
+  border-width: 0;
+
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background-color: var(--laranja-escuro);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+  margin: 1.5rem 0;
+
+  cursor: pointer;
+}
+
+.login .botao-login:hover {
+  box-shadow: 0px 3px 20px rgba(254, 85, 26, 0.5);
+}
+
+.login .mais-opcoes {
+  margin-top: 25px;
+}
+
+.login .mais-opcoes .opcao {
+  text-decoration: none;
+  color: #4b4949;
+}
+
+.login .mais-opcoes .opcao:hover {
+  font-weight: bolder;
+  text-decoration: none;
+  color: #4b4949;
+}
+
+form .login__formulario:last-of-type {
+  margin-bottom: 0.8rem;
+}

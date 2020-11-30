@@ -1,0 +1,94 @@
+#match-page-container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#match-page-container .match-page-content {
+  width: 100%;
+  height: 100%;
+}
+
+#match-page-container .match-page-content > h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 6.4rem;
+  color: var(--laranja-escuro);
+
+  margin-bottom: 4rem;
+  margin-left: 16.4rem;
+  margin-top: 8.5rem;
+}
+
+.next-queue-members-card {
+  width: 101rem;
+  height: 23.1rem;
+
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+
+  background-color: var(--azul-escuro);
+  border-radius: 1rem;
+
+  padding: 2.9rem 4rem 2.9rem 5.8rem;
+
+  margin-left: 12.2rem;
+}
+
+.next-queue-members-card .game-achievements-container {
+  width: 42.9rem;
+  height: 17.1rem;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1.7rem 1.3rem;
+
+  grid-template-areas:
+    ". a b c"
+    "d e f g";
+}
+
+.next-queue-members-card .game-achievements-container .ach-a {
+  grid-area: a;
+}
+
+.next-queue-members-card .game-achievements-container .ach-b {
+  grid-area: b;
+}
+
+.next-queue-members-card .game-achievements-container .ach-c {
+  grid-area: c;
+}
+
+.next-queue-members-card .game-achievements-container .ach-d {
+  grid-area: d;
+}
+
+.next-queue-members-card .game-achievements-container .ach-e {
+  grid-area: e;
+}
+
+.next-queue-members-card .game-achievements-container .ach-f {
+  grid-area: f;
+}
+
+.next-queue-members-card .game-achievements-container .ach-g {
+  grid-area: g;
+}
+
+.next-queue-members-card p.next-queue-members-game-name,
+.next-queue-members-card p.match-achievements-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: white;
+}
+
+.next-queue-members-card p.next-queue-members-game-name {
+  margin-bottom: 2rem;
+}

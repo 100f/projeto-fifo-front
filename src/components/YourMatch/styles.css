@@ -1,0 +1,215 @@
+.options-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  margin-top: 4.9rem;
+  margin-bottom: 3.3rem;
+}
+
+.options-right .options-right-option {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--azul-escuro);
+
+  margin-right: 2.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.options-right .options-right-option:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#actual-match-card-container h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  color: var(--azul-escuro);
+}
+
+#actual-match-card-container {
+  width: 101rem;
+  height: 40rem;
+
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: white;
+  border-radius: 1rem;
+
+  box-shadow: 0px 20px 50px rgba(176, 189, 199, 0.6);
+
+  margin-bottom: 11.5rem;
+  margin-left: 12.2rem;
+}
+#actual-match-card-container .actual-match-card-container-left,
+#actual-match-card-container .actual-match-card-container-right {
+  height: 100%;
+}
+
+#actual-match-card-container .actual-match-card-container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-left: 3.3rem;
+  margin-right: 8.9rem;
+}
+
+#actual-match-card-container
+  .actual-match-card-container-left
+  .actual-match-card-container-header {
+  width: 55.3rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 6.2rem;
+  margin-bottom: 4.7rem;
+}
+
+#actual-match-card-container
+  .actual-match-card-container-left
+  .actual-match-versus-container {
+  max-width: 55.4rem;
+  height: 6.2rem;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 4rem;
+}
+
+#actual-match-card-container
+  .actual-match-card-container-left
+  .actual-match-versus-container
+  > .actual-match-card-participants-container {
+  width: auto;
+  height: 8.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#actual-match-card-container
+  .actual-match-card-container-left
+  .actual-match-versus-container
+  > span {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 7.2rem;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  color: var(--azul-escuro);
+
+  margin: 0 4.6rem;
+}
+
+#actual-match-card-container .actual-match-card-time-section {
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: absolute;
+  right: 5.4rem;
+}
+
+#actual-match-card-container
+  .actual-match-card-container-left
+  .declare-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#actual-match-card-container .actual-match-card-container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+#actual-match-card-container .actual-match-settled-illustration-container {
+  width: 23.4rem;
+  height: 23.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 11.7rem;
+
+  background-color: white;
+
+  margin-left: 11.4rem;
+  margin-right: 10rem;
+}
+
+#actual-match-card-container .actual-match-settled-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#actual-match-card-container .actual-match-settled-options > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+
+  color: white;
+
+  margin-bottom: 1.8rem;
+  margin-top: 7rem;
+}
+
+#actual-match-card-container .actual-match-settled-options p:first-of-type {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+
+  line-height: 2.4rem;
+
+  color: white;
+
+  margin-bottom: 3.4rem;
+}
+
+#actual-match-card-container .actual-match-settled-options span {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  color: white;
+
+  margin-top: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+#actual-match-card-container .actual-match-settled-options span + p {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  text-align: center;
+  color: var(--cinza-medio);
+}
+
+#actual-match-card-container .actual-match-settled-options span:hover {
+  color: var(--laranja-escuro);
+  cursor: pointer;
+}

@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azul-escuro: #0a263a;
+  --cinza-medio: #677885;
+  --cinza-claro: #f5f7fb;
+
+  --laranja-escuro: #fe551a;
+  --verde-limao: #6fff98;
+}
+
+html {
+  font-size: 62.5%;
+}

@@ -1,0 +1,51 @@
+.about-matches-page-container {
+  width: 100%;
+  min-height: 60.6rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: white;
+
+  position: relative;
+}
+.about-matches-page-container > div:first-of-type {
+  width: 43.3rem;
+  height: 24.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.about-matches-page-container > div:first-of-type > h2 {
+  width: 40.9rem;
+
+  font-weight: bold;
+  font-size: 4rem;
+
+  color: var(--azul-escuro);
+
+  line-height: 4.9rem;
+  letter-spacing: -0.02em;
+}
+
+.about-matches-page-container > div:first-of-type > p {
+  max-width: 43.3rem;
+
+  font-weight: 400;
+  font-size: 2rem;
+
+  line-height: 2.44rem;
+}
+
+.about-matches-page-container > div:last-of-type {
+  width: 33.75rem;
+  height: 27.6rem;
+
+  position: relative;
+}

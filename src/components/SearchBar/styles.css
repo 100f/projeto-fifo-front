@@ -1,0 +1,33 @@
+#search-bar-container {
+  width: 34.5rem;
+  height: 3.7rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: var(--cinza-claro);
+
+  border-radius: 1rem;
+
+  padding: 0.7rem 1.7rem;
+}
+
+#search-bar-container > .search-bar-icon {
+  color: var(--cinza-medio);
+  margin-right: 1.7rem;
+}
+
+#search-bar-container > input {
+  width: 100%;
+
+  background-color: transparent;
+  border: none;
+
+  font-family: "Roboto Mono", sans-serif;
+  color: var(--azul-escuro);
+}
+
+#search-bar-container > input:focus {
+  outline: none;
+}

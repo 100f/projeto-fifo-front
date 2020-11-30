@@ -1,0 +1,14 @@
+#login-page-container {
+  width: 100%;
+  height: 100vh;
+
+  background-color: var(--azul-escuro);
+
+  position: relative;
+}
+
+#login-page-container > img {
+  position: absolute;
+  top: 5.2rem;
+  left: 6.5rem;
+}

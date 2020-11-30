@@ -1,0 +1,40 @@
+#stage-title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+
+  margin: 7rem 0 2.4rem 0;
+  padding-left: 2.2rem;
+}
+
+#stage-title-container .stage-title-circle {
+  width: 3rem;
+  height: 3rem;
+
+  border-radius: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+
+  margin-right: 1.1rem;
+}
+
+#stage-title-container .stage-title-circle .stage-title-number {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: var(--azul-escuro);
+}
+
+#stage-title-container .stage-title-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: white;
+}
