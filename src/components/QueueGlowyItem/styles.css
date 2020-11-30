@@ -1,0 +1,41 @@
+.queue-glowy-item-container {
+  width: 21rem;
+  height: 3rem;
+
+  min-height: 3rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  color: white;
+
+  border-radius: 2rem;
+
+  filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.2));
+}
+
+.queue-glowy-item-container > div {
+  width: 2.1rem;
+  height: 2.1rem;
+
+  border-radius: 1.05rem;
+
+  margin-right: 2.1rem;
+  margin-left: 1rem;
+
+  background-color: white;
+}
+
+.queue-glowy-item-container > p {
+  position: relative;
+  float: left;
+
+  cursor: default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}

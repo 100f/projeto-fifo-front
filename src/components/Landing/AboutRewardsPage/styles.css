@@ -1,0 +1,44 @@
+.about-rewards-page-container {
+  width: 100%;
+  min-height: 60.5rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: var(--cinza-claro);
+
+  position: relative;
+}
+
+.about-rewards-page-container img {
+  margin-left: 18.26%;
+  margin-right: 18.7rem;
+}
+
+.about-rewards-page-container > div {
+  width: 45.6rem;
+  height: 19.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  font-family: "Montserrat", sans-serif;
+  color: var(--azul-escuro);
+}
+
+.about-rewards-page-container > div > h2 {
+  font-weight: bold;
+  font-size: 4rem;
+
+  line-height: 4.9rem;
+  letter-spacing: -0.02em;
+}
+
+.about-rewards-page-container > div > p {
+  max-width: 43.3rem;
+  font-weight: 400;
+  font-size: 2rem;
+}

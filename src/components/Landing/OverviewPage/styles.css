@@ -1,0 +1,84 @@
+.overview-page-container {
+  width: 100%;
+  height: 65.7rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  background-color: white;
+
+  position: relative;
+}
+
+.overview-page-container > h1 {
+  position: absolute;
+  top: 6.2rem;
+  left: 24.72%;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 6.4rem;
+
+  color: var(--azul-escuro);
+
+  z-index: 10;
+}
+
+.overview-page-container > .game-control-illustration {
+  position: absolute;
+  top: 12.4rem;
+  left: 9.8%;
+
+  width: 49.5rem;
+  height: 42.6rem;
+}
+
+.overview-page-container .overview-page-info {
+  max-width: 53rem;
+  width: 53rem;
+  height: 19rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  top: 27.2rem;
+  left: 50%;
+}
+.overview-page-container .overview-page-info p {
+  width: 100%;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+
+  color: var(--azul-escuro);
+
+  line-height: 2.44rem;
+}
+
+.overview-page-container .overview-page-info > div {
+  width: 30.7rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-page-container .overview-page-info > div > span {
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+
+  color: var(--azul-escuro);
+
+  transition: opacity 0.7s;
+}
+
+.overview-page-container .overview-page-info > div > span:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
