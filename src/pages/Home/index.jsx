@@ -63,7 +63,7 @@ const Home = () => {
         </header>
         {
           availableMatches.length > 0
-          ? <MatchCreationCard />//<AvailableMatchesList list={availableMatches}/>
+          ? <AvailableMatchesList list={availableMatches}/>
           : <MatchCreationCard />
         }    
         <h2 className="page-home-content-favs">Seus Favoritos</h2>

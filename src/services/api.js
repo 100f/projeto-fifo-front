@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api',
+  baseURL: 'http://squad5-fifo-api.herokuapp.com/api',
 });
 
 export default api;
