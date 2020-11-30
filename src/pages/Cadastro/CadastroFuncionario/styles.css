@@ -1,4 +1,6 @@
 #page-cadastro-funcionario {
+  background-color: var(--azul-escuro);
+
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -6,25 +8,55 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  font-family: "Metropolis Black", sans-serif;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 4.75rem;
-  margin-bottom: 2.5rem;
-  color: #4b4949;
-}
-
-#page-cadastro-funcionario form {
-  width: 30rem;
+#page-cadastro-funcionario header {
+  width: 100%;
+  height: 14.3rem;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+#page-cadastro-funcionario header img {
+  margin-left: 6.5rem;
+}
+
+.page-cadastro-funcionario-title {
+  margin-top: 4.1rem;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+
+  color: white;
+}
+#page-cadastro-funcionario > div {
+  width: 46.2rem;
+  height: 44.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: var(--azul-escuro);
+
+  box-shadow: 0px 7px 7px 4px rgba(0, 0, 0, 0.25);
+
+  position: relative;
+}
+
+#page-cadastro-funcionario div form {
+  width: 29.1rem;
+  height: auto;
+
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-top: 1.9rem;
 }
 
 .input__cadastro {
@@ -32,25 +64,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-
-  width: 100%;
 }
 
-.input__cadastro label {
-  font-size: 1.2rem;
-  margin-bottom: 0.7rem;
-  font-weight: bold;
+.input__cadastro > label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: var(--cinza-medio);
+
+  margin-bottom: 0.3rem;
 }
 
 .input__cadastro input {
-  border-radius: 0.4rem;
-  border: 1px solid #bbbbbb;
-  height: 3.6rem;
-  padding: 0.5rem 1rem;
-  color: #4b4949;
-  width: 100%;
+  height: 3rem;
 
-  margin-bottom: 2rem;
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--cinza-medio);
+
+  padding: 0.5rem 1.7rem;
 }
 
 .input__cadastro input:focus {
@@ -58,16 +90,26 @@
   border-color: #757474;
 }
 
-#page-cadastro-funcionario form .botao-cadastro {
-  padding: 9px 10px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  text-decoration: none;
-  border: 0;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  height: 3.6rem;
+#page-cadastro-funcionario div form .botao-cadastro {
+  width: 29.1rem;
+  height: 3rem;
 
-  font-weight: bolder;
+  border-radius: 1rem;
+  border-width: 0;
+
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background-color: var(--laranja-escuro);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+  margin: 1.5rem 0;
+
+  cursor: pointer;
+}
+
+#page-cadastro-funcionario div form .botao-cadastro:hover {
+  box-shadow: 0px 3px 20px rgba(254, 85, 26, 0.5);
 }
