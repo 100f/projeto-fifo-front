@@ -15,14 +15,16 @@ import Home from '../pages/Home';
 import Queue from '../pages/Queue';
 import NotFound from '../pages/NotFound';
 import Match from '../pages/Match'; 
+import Landing from '../pages/Landing'; 
 
 const Routes = () => (
   <Router>
     <AuthProvider>
       <MatchStateProvider>
         <Switch>
-          <PublicRoute path="/" exact component={LoginFuncionario}/>
-          <PublicRoute path="/visitante" component={LoginVisitante}/>
+          <PublicRoute path="/" exact component={Landing}/>
+          <PublicRoute path="/login/visitante" component={LoginVisitante}/>
+          <PublicRoute path="/login/funcionario" component={LoginFuncionario}/>
           <PublicRoute path="/cadastro/funcionario" component={CadastroFuncionario}/>
           <PublicRoute path="/cadastro/visitante" component={CadastroVisitante}/>
           <PublicRoute path="/home" component={Home}/>

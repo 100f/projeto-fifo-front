@@ -1,81 +1,152 @@
 .container {
-  width: 70vw;
-  max-width: 400px;
+  width: 100%;
   min-width: 100px;
-  margin: 20px auto;
-  
+
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .login {
-    width: 400px;
-    margin: 0 auto;
-    padding: 35px;
-    border: 1px solid #BBBBBB;
-    border-radius: 5px;
+  width: 45.1rem;
+  height: 37.4rem;
 
-    font-family: 'Metropolis Black', sans-serif;
-  }
-  
-  .login__titulo {
-    font-size: 2.5rem;
-    color: #4b4949;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .login__formulario {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  .login__formulario label {
-    margin-bottom: 5px;
-    color:  #4b4949;
-    font-size: 1.2rem;
-  }
-  
-  .login__formulario input {
-    border-radius: 4px;
-    border: 1px solid #BBBBBB;
-    height: 36px;
-    padding: 5px 10px;
-    color: #4b4949;
-  }
-  
-  .login__formulario input:focus {
-    outline: 0;
-    border-color:#757474; 
-  }
-  
-  .login .botao-login {
-    padding: 9px 10px;
-    margin-top: 5px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    border: 0;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
-  .login .mais-opcoes {
-    margin-top: 25px;
-  }
+  padding: 0 8rem;
 
-  .login .mais-opcoes .opcao {
-    text-decoration: none;
-    color: #4b4949;
-  }
+  background-color: var(--azul-escuro);
+  box-shadow: 0px 7px 7px 4px rgba(0, 0, 0, 0.25);
 
-  .login .mais-opcoes .opcao:hover {
-    font-weight: bolder;
-    text-decoration: none;
-    color: #4b4949;
-  }
+  border-radius: 1rem;
 
+  margin-top: 17.9rem;
+}
+
+.login__titulo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+
+  color: white;
+
+  margin-top: 4.1rem;
+  margin-bottom: 0.8rem;
+
+  text-align: center;
+}
+.login-register-link {
+  align-self: flex-start;
+  text-decoration: none;
+
+  text-emphasis: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  color: var(--cinza-medio);
+}
+
+.login-register-link > strong {
+  color: white;
+}
+
+.login__titulo + span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+
+  color: white;
+
+  margin-bottom: 2.6rem;
+}
+
+.login__formulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.login__formulario label {
+  width: 100%;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--cinza-medio);
+
+  margin-bottom: 0.3rem;
+}
+
+.login__formulario input {
+  height: 3rem;
+
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--cinza-medio);
+
+  padding: 0.5rem 1.7rem;
+}
+
+.login__formulario input:focus {
+  outline: 0;
+}
+
+.login__formulario + span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  color: white;
+
+  margin-bottom: 1.8rem;
+  margin-top: 8rem;
+}
+
+.login .botao-login {
+  width: 29.1rem;
+  height: 3rem;
+
+  border-radius: 1rem;
+  border-width: 0;
+
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background-color: var(--laranja-escuro);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+
+  margin: 1.5rem 0;
+
+  cursor: pointer;
+}
+
+.login .botao-login:hover {
+  box-shadow: 0px 3px 20px rgba(254, 85, 26, 0.5);
+}
+
+.login .mais-opcoes {
+  margin-top: 25px;
+}
+
+.login .mais-opcoes .opcao {
+  text-decoration: none;
+  color: #4b4949;
+}
+
+.login .mais-opcoes .opcao:hover {
+  font-weight: bolder;
+  text-decoration: none;
+  color: #4b4949;
+}
+
+form .login__formulario:last-of-type {
+  margin-bottom: 0.8rem;
+}
