@@ -12,8 +12,8 @@ import QueueList from '../../components/QueueList';
 import TimeContainer from '../../components/TimeContainer';
 import OngoingMatchCard from '../../components/OngoingMatchCard';
 import Select from '../../components/Select';
+import Whitespace from '../../components/Misc/WhitespaceFooter';
 
-import mockMembers from '../../assets/temp/queueMembers.json';
 import convertDatasetForSelect from '../../utils/convertDatasetForSelect';
 
 import api from '../../services/api';
@@ -21,18 +21,19 @@ import api from '../../services/api';
 import './styles.css';
 
 const Queue = () => {
-  const { deviceId } = useParams();
+  const { id: deviceId } = useParams();
   const { loggedUser } = useAuth();
   
-  const [gameName, setGameName] = useState('Fifa');
-  const [deviceName, setDeviceName] = useState('PS4');
+  const [gameName, setGameName] = useState('');
+  const [deviceName, setDeviceName] = useState('');
   const [gameImagePath, setGameImagePath] = useState(null);
   const [estimatedGameTime, setEstimatedGameTime] = useState('20:00');
   
   const [queueMembers, setQueueMembers] = useState([]);
   const [isNext, setIsNext] = useState(false);
 
-  const [changeGame, setChangeGame] = useState(true);
+  //Estados relativos à aparição do card de mudança de jogo, quando o usuário quiser mudar de fila
+  const [changeGame, setChangeGame] = useState(false);
   const [newGame, setNewGame] = useState({ id: 'selecione o jogo', name: '' });
   const [availableGames, setAvailableGames] = useState([]);
 
@@ -49,14 +50,31 @@ const Queue = () => {
   }, [queueMembers]);
 
   const fetchCurrentQueueMembers = useCallback(async () => {
-    setQueueMembers(mockMembers);
+    try {
+      const queueResponse = await api.get(`filas/${deviceId}`);
+      const queueData = await queueResponse.data;
+      setQueueMembers(queueData);
+    }
+    catch(err) {
+      throw err;
+    }
   }, [setQueueMembers]);
 
   const fetchPageData = useCallback(async () => {
-    const fetchedAvailableGames = await api.get('home/jogos');
-    const fetchedGames = await fetchedAvailableGames.data;
-    const convertedGames = convertDatasetForSelect(fetchedGames, 'nome', 'id');
-    setAvailableGames(convertedGames);
+    try {
+      const gamesResponse = await api.get('home/jogos');
+      const fetchedGames = await gamesResponse.data;
+      const convertedGames = convertDatasetForSelect(fetchedGames, 'nome', 'id');
+      setAvailableGames(convertedGames);
+
+      const pageResponse = await api.get(`filas/${deviceId}/dadosPagina`);
+      const pageData = await pageResponse.data;
+      setDeviceName(pageData.nomeDispositivo);
+      setGameName(pageData.nomeJogo);
+    }
+    catch(err) {
+      throw err;
+    }
   }, [setGameName, setGameImagePath, setAvailableGames]);
 
   const getNextPlayer = async () => {
@@ -111,16 +129,21 @@ const Queue = () => {
                 value={{ label: newGame?.name || 'selecione o jogo', value: newGame?.id || '' }}
                 onChange={e => setNewGame({ name: e.label, id: e.value })}
               />
+              <NextStepButton />
             </div>
           }
-          <div className="queue-game-image" onClick={() => {}}>
-            <img src={gameImagePath} alt={gameName} />
-          </div> 
+          {
+            !changeGame && 
+            <div className="queue-game-image" onClick={() => setChangeGame(true)}>
+              {gameImagePath && <img src={gameImagePath} alt={gameName} />}
+            </div> 
+          }
         </div>
         
         <h2>Partida Atual</h2>
-        <OngoingMatchCard />
-      </div>
+        <OngoingMatchCard game={gameName}/>
+        <Whitespace/>
+      </div>    
     </div>
   )
 };

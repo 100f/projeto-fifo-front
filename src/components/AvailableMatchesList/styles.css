@@ -12,3 +12,7 @@
 #available-matches-list-container::-webkit-scrollbar {
   width: 0;
 }
+
+#available-matches-list-container .match-creation-card-list-item {
+  align-self: flex-start;
+}

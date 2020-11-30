@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 import { MdKeyboardArrowDown as ArrowDownIcon, MdSearch as SearchIcon } from 'react-icons/md';
 
+import useAuth from '../../hooks/useAuth';
+
 import PlayButton from '../PlayButton';
 import NextStepButton from '../NextStepButton';
 import StageTitle from '../StageTitle';
 import StageBackButton from '../StageBackButton';
-
 import Select from '../Select';
 
 import convertDatasetForSelect from '../../utils/convertDatasetForSelect';
@@ -15,21 +16,18 @@ import api from '../../services/api';
 
 import './styles.css';
 
-const MatchCreationCard = () => {
+const MatchCreationCard = ({ otherGameMessage = false }) => {
   const [stage, switchStage] = useState(0);
 
   const [games, setGames] = useState([]);
   const [selectedGame, setSelectedGame] = useState(null);
 
   const [availablePlayers, setAvailablePlayers] = useState([]);
-  const [invitedPlayer, setInvitedPlayer] = useState(null);
+  const [invitedPlayers, setInvitedPlayers] = useState([]);
 
   const [local, setLocal] = useState('Hall de Entrada');
 
-  const [opponents, setOpponents] = useState([
-    { id: 1, name: 'Oponente 1' }, 
-    { id: 16, name: 'Oponente 2'} //temp, a ser definido depois
-  ]);
+  const { loggedUser: { id } } = useAuth();
 
   useEffect(() => {
     if(stage === 1) fetchGames();
@@ -61,9 +59,13 @@ const MatchCreationCard = () => {
     }   
   };
 
+  const handleMatchCreation = () => {
+    
+  };
+
   const handleStageSkipping = e => {
     e.preventDefault();
-    setInvitedPlayer(null);
+    setInvitedPlayers([]);
     switchStage(3);
   };
 
@@ -122,14 +124,16 @@ const MatchCreationCard = () => {
             options={availablePlayers}
             dropdownIcon={ArrowDownIcon}
             leftIcon={SearchIcon}
-            value={{ label: invitedPlayer?.name || '', value: invitedPlayer?.id || '' }}
-            onChange={e => setInvitedPlayer({ id: e.value, name: e.label })}
+            value={invitedPlayers}
+            placeholder="procurar player"
+            onChange={selectedPlayers => {setInvitedPlayers(selectedPlayers)}}
+            isMulti
             searchable
           />
           <NextStepButton 
-            text="próximo passo" 
+            text="enviar convite(s)" 
             onClick={handlePairDefinition} 
-            disabled={!!!invitedPlayer} 
+            disabled={!invitedPlayers?.length > 0} 
           />
           <div id="skip-stage-button" onClick={handleStageSkipping}>pular etapa</div>
           <StageBackButton color="white" onClick={handleStageBack}/>
@@ -142,12 +146,14 @@ const MatchCreationCard = () => {
           <StageTitle stage={stage} title="Revisando!" />
           <p className="third-stage-message">
             {
-              invitedPlayer 
-              ? <span>Você vai jogar <strong className="third-stage-emphasis">{selectedGame.name}</strong> no(a) <strong className="third-stage-emphasis">{local}</strong> com <strong className="third-stage-emphasis">{invitedPlayer.name}</strong>, <strong className="third-stage-emphasis">{opponents[0].name}</strong> e <strong>{opponents[1].name}</strong></span>
-              : <span>Você vai jogar <strong className="third-stage-emphasis">{selectedGame.name}</strong> no(a) <strong className="third-stage-emphasis">{local}</strong>, sozinho(a)</span>
+              invitedPlayers.length > 0 
+              ? <span>
+                  Você vai jogar <strong className="third-stage-emphasis">{selectedGame.name}</strong> no(a) <strong className="third-stage-emphasis">{local}</strong> com { invitedPlayers.map((player, index) => index !== invitedPlayers.length - 1 && <strong className="third-stage-emphasis">{player.label}{index !== invitedPlayers.length - 2 && ','} </strong>)}  {invitedPlayers.length > 1 && 'e'} <strong className="third-stage-emphasis">{invitedPlayers[invitedPlayers.length - 1].label}.</strong>
+                </span>
+              : <span>Você vai jogar <strong className="third-stage-emphasis">{selectedGame.name}</strong> no(a) <strong className="third-stage-emphasis">{local}</strong>, sozinho(a).</span>
             }
           </p>
-          <NextStepButton text="partiu jogar" onClick={() => {}} />
+          <NextStepButton text="partiu jogar" onClick={handleMatchCreation} />
           <StageBackButton color="white" onClick={handleStageBack}/>
         </div>
       );    
@@ -155,10 +161,31 @@ const MatchCreationCard = () => {
     default:
       return (
         <div className="match-creation-card-container match-creation-card-container-hoverable">
-          <p className="default-stage-title">cri cri cri...</p>
+          <p className="default-stage-title">
+            {
+              otherGameMessage 
+              ?
+                <span>outro jogo?</span>
+              :
+                <span>cri cri cri...</span>
+            }
+            
+          </p>
           <p className="default-stage-message">
-            Ainda não escolheram nenhum jogo. <br/><br/>
-            Gostaria de <strong>começar uma partida?</strong>
+            {
+              otherGameMessage 
+              ?
+                <span>
+                  Não encontrou o que estava procurando? <br/><br/>
+                  Sem b.o. Só escolher outro jogo e <strong>entrar na fila.</strong>
+                </span>
+              :
+                <span>
+                  Ainda não escolheram nenhum jogo. <br/><br/>
+                  Gostaria de <strong>começar uma partida?</strong>
+                </span>
+            }
+
           </p>
           <PlayButton onClick={() => switchStage(1)} />
         </div>

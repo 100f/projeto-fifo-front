@@ -9,6 +9,7 @@ import FavouriteGamesList from '../../components/FavouriteGamesList';
 import RankingRight from '../../components/Ranking/RankingRight';
 import Menu from '../../components/Menu/Menu';
 import SearchBar from '../../components/SearchBar';
+import Whitespace from '../../components/Misc/WhitespaceFooter';
 
 import mockGames from '../../assets/temp/favouriteGames.json';
 
@@ -62,14 +63,14 @@ const Home = () => {
         </header>
         {
           availableMatches.length > 0
-          ? <AvailableMatchesList list={availableMatches}/>
+          ? <MatchCreationCard />//<AvailableMatchesList list={availableMatches}/>
           : <MatchCreationCard />
         }    
-
         <h2 className="page-home-content-favs">Seus Favoritos</h2>
-        <FavouriteGamesList list={favouriteGames}/>
+        <FavouriteGamesList list={favouriteGames} />
         <RankingRight />
-        <Menu/>
+        <Menu />
+        <Whitespace />
       </div>
     </div> 
   )
