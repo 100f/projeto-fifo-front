@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import AuthProvider from '../contexts/auth/Provider';
+import MatchStateProvider from '../contexts/matchState/Provider';
 
 import PublicRoute from './PublicRoute';
 //import PrivateRoute from './PrivateRoute';
@@ -18,16 +19,18 @@ import Match from '../pages/Match';
 const Routes = () => (
   <Router>
     <AuthProvider>
-      <Switch>
-        <PublicRoute path="/" exact component={LoginFuncionario}/>
-        <PublicRoute path="/visitante" component={LoginVisitante}/>
-        <PublicRoute path="/cadastro/funcionario" component={CadastroFuncionario}/>
-        <PublicRoute path="/cadastro/visitante" component={CadastroVisitante}/>
-        <PublicRoute path="/home" component={Home}/>
-        <PublicRoute path="/queue/:id" component={Queue}/>
-        <PublicRoute path="/match/:id" component={Match}/>
-        <Route component={NotFound}/>
-      </Switch>
+      <MatchStateProvider>
+        <Switch>
+          <PublicRoute path="/" exact component={LoginFuncionario}/>
+          <PublicRoute path="/visitante" component={LoginVisitante}/>
+          <PublicRoute path="/cadastro/funcionario" component={CadastroFuncionario}/>
+          <PublicRoute path="/cadastro/visitante" component={CadastroVisitante}/>
+          <PublicRoute path="/home" component={Home}/>
+          <PublicRoute path="/queue/:id" component={Queue}/>
+          <PublicRoute path="/match/:id" component={Match}/>
+          <Route component={NotFound}/>
+        </Switch>
+      </MatchStateProvider>
     </AuthProvider>
   </Router>
 );
