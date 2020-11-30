@@ -71,6 +71,10 @@ const Queue = () => {
       const pageData = await pageResponse.data;
       setDeviceName(pageData.nomeDispositivo);
       setGameName(pageData.nomeJogo);
+
+      const gameImageResponse = await api.get(`jogos/${deviceId}`);
+      const gameData = await gameImageResponse.data;
+      setGameImagePath(gameData.urlCapa);
     }
     catch(err) {
       throw err;

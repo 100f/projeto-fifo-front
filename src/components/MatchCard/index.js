@@ -30,7 +30,7 @@ const MatchCard = ({ key, imgAlt, local, deviceId, gameId }) => {
 
   const gotoQueue = async (deviceId) => {
     await api.post('filas/convidar', {
-      convidante: 4,
+      convidante: id,
       dispositivo: deviceId,
       jogo: gameId
     });
